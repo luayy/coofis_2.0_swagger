@@ -4,10 +4,12 @@ app = FastAPI()
 
 
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
+def root():
+    return {"Desc": "This is a documentation of Coofis 2.0 API"}
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: str = None):
-    return {"item_id": item_id, "q": q}
+@app.get("/division-list")
+def read_item():
+    return [{"Id": "1", "name": "EVP RKO"},
+    {"Id": "2", "name": "ADT Commerce and CS"},
+    {"Id": "3", "name": "EVP Kons Reg JBT"}]
