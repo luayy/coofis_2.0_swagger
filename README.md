@@ -124,7 +124,7 @@ If you don't know, check the _"In a hurry?"_ section about <a href="https://fast
 Run the server with:
 
 ```bash
-make run
+make
 ```
 
 <details markdown="1">
