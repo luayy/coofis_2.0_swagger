@@ -1,2 +1,2 @@
 fastapi
-uvicorn
+uvicorn # ASGI server, for production such as Uvicorn or Hypercorn.
