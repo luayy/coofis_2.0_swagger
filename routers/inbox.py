@@ -12,3 +12,10 @@ def get_inboxes():
 @router.get("/inbox/{nomor_surat}")
 def get_inbox_detail(id_surat: str):
     return {"body": "some important mail", "nomor_surat": id_surat}
+
+@router.get("/inbox/send/")
+def get_inbox_send():
+    return [
+        {"nomor_surat" : "01/CS/None/2019-R", "sender": "Fachrul",
+        "receiver" : ["Indah", "Gading", "Bruno"], "date": "25/12/2019", "body": "Segera adakan agenda rapat bulanan"}
+    ]

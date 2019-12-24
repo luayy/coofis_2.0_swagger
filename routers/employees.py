@@ -13,7 +13,7 @@ def get_employee():
 @router.get("/employee/{name}")
 def get_employee_detail(nama: str):
     return {
-        "ide": "1",
+        "id": "1",
         "full_name": "Achmad Hartanto",
         "nick_name": "Achmad",
         "division": "EVP RKO",
