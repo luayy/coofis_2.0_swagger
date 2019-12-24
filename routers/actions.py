@@ -3,7 +3,7 @@ from fastapi import APIRouter
 router = APIRouter()
 
 @router.get("/action/")
-def read_action():
+def get_action():
     return [
         {"Id": "1", "name": "Approve"},
         {"Id": "2", "name": "Reject"},
