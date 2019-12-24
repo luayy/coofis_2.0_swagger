@@ -65,11 +65,7 @@ workon fastapi
 pip install -r requirements.txt
 ```
 
-You will also need an ASGI server, for production such as <a href="http://www.uvicorn.org" target="_blank">Uvicorn</a> or <a href="https://gitlab.com/pgjones/hypercorn" target="_blank">Hypercorn</a>.
-
-```bash
-pip install uvicorn
-```
+You will also need an ASGI server, for production such as <a href="http://www.uvicorn.org" target="_blank">Uvicorn</a> or <a href="https://gitlab.com/pgjones/hypercorn" target="_blank">Hypercorn</a> which has include in the requirements.txt.
 
 ## Example
 

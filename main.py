@@ -1,4 +1,5 @@
 from fastapi import Depends, FastAPI, Header, HTTPException
+from pydantic import BaseModel
 from routers import divisions, employees, actions, inbox
 
 app = FastAPI()
