@@ -1,6 +1,20 @@
 from fastapi import APIRouter
+from pydantic import BaseModel
 
 router = APIRouter()
+
+class Inbox(BaseModel):
+    no_agenda: str
+    receive_date: str
+    no_surat: str
+    date: str
+    sender: str
+    receiver: str
+    copytos: str
+    subject: str
+    priority: str
+    type: str
+    desc: str
 
 @router.get("/inbox/")
 def get_inboxes():
@@ -19,3 +33,7 @@ def get_inbox_send():
         {"nomor_surat" : "01/CS/None/2019-R", "sender": "Fachrul",
         "receiver" : ["Indah", "Gading", "Bruno"], "date": "25/12/2019", "body": "Segera adakan agenda rapat bulanan"}
     ]
+
+@router.post("/inbox/")
+async def create_inbox(inbox:Inbox):
+    return inbox
