@@ -11,15 +11,15 @@ class Employee(BaseModel):
     city: str
     phone: str
 
-@router.get("/employee/")
+@router.get("/nde/employee/")
 def get_employee():
     return [
-        {"Id": "1", "name": "Achmad"},
-        {"Id": "2", "name": "Budi"},
-        {"Id": "3", "name": "Caca"}
+        {"id": "1", "name": "Achmad"},
+        {"id": "2", "name": "Budi"},
+        {"id": "3", "name": "Caca"}
     ]
 
-@router.get("/employee/{name}")
+@router.get("/nde/employee/{name}")
 def get_employee_detail(nama: str):
     return {
         "id": "1",
@@ -31,6 +31,16 @@ def get_employee_detail(nama: str):
         "phone": "089567112304"
     }
 
+<<<<<<< HEAD
 @router.post("/employee/")
 async def create_employee(employee: Employee):
     return employee
+=======
+@router.post("/nde/employee/")
+async def create_employee(employee: Employee):
+    return employee
+
+@router.put("/nde/employee/{id}")
+async def update_employee(employee_id: int, employee: Employee):
+    return {"employee_id": employee_id, **employee.dict()}
+>>>>>>> e7fcbb5e9d9b6d3ae608acdac2f7907a309dcd62

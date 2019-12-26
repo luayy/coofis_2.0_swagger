@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
-@router.get("/division/")
+@router.get("/nde/division/")
 def get_division():
     return [
         {"Id": "1", "name": "EVP RKO"},
