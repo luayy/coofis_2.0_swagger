@@ -32,5 +32,5 @@ def get_employee_detail(nama: str):
     }
 
 @router.post("/employee/")
-async def create_item(employee: Employee):
+async def create_employee(employee: Employee):
     return employee
