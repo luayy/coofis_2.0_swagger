@@ -10,7 +10,7 @@ class Inbox(BaseModel):
     date: str
     sender: str
     receiver: str
-    copytos: str
+    copytos: str = None
     subject: str
     priority: str
     type: str
