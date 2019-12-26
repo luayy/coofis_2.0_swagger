@@ -14,9 +14,9 @@ class Employee(BaseModel):
 @router.get("/employee/")
 def get_employee():
     return [
-        {"Id": "1", "name": "Achmad"},
-        {"Id": "2", "name": "Budi"},
-        {"Id": "3", "name": "Caca"}
+        {"id": "1", "name": "Achmad"},
+        {"id": "2", "name": "Budi"},
+        {"id": "3", "name": "Caca"}
     ]
 
 @router.get("/employee/{name}")
@@ -32,5 +32,9 @@ def get_employee_detail(nama: str):
     }
 
 @router.post("/employee/")
-async def create_item(employee: Employee):
+async def create_employee(employee: Employee):
     return employee
+
+@router.put("/employee/{id}")
+async def update_employee(employee_id: int, employee: Employee):
+    return {"employee_id": employee_id, **employee.dict()}
