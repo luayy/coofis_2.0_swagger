@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
-@router.get('/priority/')
+@router.get('/nde/priority/')
 def get_priority():
     return [
         {"id": "1", "priority": "Umum"},

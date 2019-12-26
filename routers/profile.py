@@ -8,7 +8,7 @@ class Profile(BaseModel):
     jabatan: str
     profile_image: str
 
-@router.get("/profile/")
+@router.get("/nde/profile/")
 def get_profile():
     return [
         {
