@@ -1,2 +1,6 @@
 fastapi
 uvicorn # ASGI server, for production such as Uvicorn or Hypercorn.
+pyjwt
+passlib[bcrypt]
+email-validator
+python-multipart
