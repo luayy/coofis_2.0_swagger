@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
-@router.get("/nde/action/")
+@router.get("/nde/action/", tags=["config"])
 def get_action():
     return [
         {"Id": "1", "name": "Approve"},
