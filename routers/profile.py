@@ -8,7 +8,7 @@ class Profile(BaseModel):
     jabatan: str
     profile_image: str
 
-@router.get("/nde/profile/")
+@router.get("/nde/config/profile/v1", tags=["config"])
 def get_profile():
     return [
         {
@@ -19,6 +19,6 @@ def get_profile():
         }
     ]
 
-@router.put("/update-profile/")
+@router.put("nde/config/update-profile/v1", tags=["config"])
 async def update_profile(profile:Profile):
     return {**profile.dict()}
